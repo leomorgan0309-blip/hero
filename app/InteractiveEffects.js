@@ -5,50 +5,16 @@ import { useEffect } from "react";
 export default function InteractiveEffects() {
   useEffect(() => {
     const loader = document.getElementById("loader");
-    const cursor = document.getElementById("cursor");
     const nav = document.querySelector(".nav");
     const navLinksPanel = document.querySelector(".nav-links");
     const mobileToggle = document.getElementById("mobileToggle");
-    const heroImage = document.querySelector(".hero-image-container");
     const magneticItems = document.querySelectorAll(".btn-magnetic");
-    const hoverTargets = document.querySelectorAll("a, button, .btn, .nav-link");
     const navLinks = document.querySelectorAll(".nav-links .nav-link");
     const clickableButtons = document.querySelectorAll("button, .btn");
 
     const hideLoader = window.setTimeout(() => {
       if (loader) loader.classList.add("hidden");
     }, 1800);
-
-    let cursorX = 0;
-    let cursorY = 0;
-    let currentX = 0;
-    let currentY = 0;
-
-    const onMouseMove = (event) => {
-      cursorX = event.clientX;
-      cursorY = event.clientY;
-
-      if (heroImage) {
-        const x = (event.clientX / window.innerWidth - 0.5) * 10;
-        const y = (event.clientY / window.innerHeight - 0.5) * 10;
-        heroImage.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    };
-
-    const animateCursor = () => {
-      currentX += (cursorX - currentX) * 0.15;
-      currentY += (cursorY - currentY) * 0.15;
-      if (cursor) {
-        cursor.style.left = `${currentX}px`;
-        cursor.style.top = `${currentY}px`;
-      }
-      window.requestAnimationFrame(animateCursor);
-    };
-
-    const onHoverIn = () => cursor?.classList.add("active");
-    const onHoverOut = () => cursor?.classList.remove("active");
-    const onPointerDown = () => cursor?.classList.add("clicking");
-    const onPointerUp = () => cursor?.classList.remove("clicking");
 
     const magneticHandlers = [];
     magneticItems.forEach((item) => {
@@ -64,14 +30,6 @@ export default function InteractiveEffects() {
       item.addEventListener("mousemove", move);
       item.addEventListener("mouseleave", leave);
       magneticHandlers.push({ item, move, leave });
-    });
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mousedown", onPointerDown);
-    document.addEventListener("mouseup", onPointerUp);
-    hoverTargets.forEach((el) => {
-      el.addEventListener("mouseenter", onHoverIn);
-      el.addEventListener("mouseleave", onHoverOut);
     });
 
     const onToggleMobileMenu = () => {
@@ -146,13 +104,9 @@ export default function InteractiveEffects() {
     });
 
     window.addEventListener("resize", onResize);
-    animateCursor();
 
     return () => {
       window.clearTimeout(hideLoader);
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mousedown", onPointerDown);
-      document.removeEventListener("mouseup", onPointerUp);
       window.removeEventListener("resize", onResize);
       mobileToggle?.removeEventListener("click", onToggleMobileMenu);
       navLinks.forEach((link) => {
@@ -161,10 +115,6 @@ export default function InteractiveEffects() {
       clickHandlers.forEach(({ button, onClick, onPopEnd }) => {
         button.removeEventListener("click", onClick);
         button.removeEventListener("animationend", onPopEnd);
-      });
-      hoverTargets.forEach((el) => {
-        el.removeEventListener("mouseenter", onHoverIn);
-        el.removeEventListener("mouseleave", onHoverOut);
       });
       magneticHandlers.forEach(({ item, move, leave }) => {
         item.removeEventListener("mousemove", move);

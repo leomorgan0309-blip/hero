@@ -8,7 +8,6 @@ export default function Home() {
       <div className="loader" id="loader">
         <div className="loader-bar" />
       </div>
-      <div className="cursor" id="cursor" aria-hidden="true" />
       <div className="bg-grid" aria-hidden="true" />
       <div className="bg-gradient bg-gradient-1" aria-hidden="true" />
       <div className="bg-gradient bg-gradient-2" aria-hidden="true" />
