@@ -1297,7 +1297,7 @@ html {
   bottom: 18%;
   margin: 0;
   color: #ececec;
-  font-size: clamp(100px, 20vw, 420px);
+  font-size: 15vw;
   font-weight: 800;
   line-height: 0.82;
   letter-spacing: -4px;
