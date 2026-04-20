@@ -499,20 +499,48 @@ body {
 }
 
 .cursor {
-  width: 12px;
-  height: 12px;
-  background: #0a1628;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid rgba(10, 22, 40, 0.55);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 10000;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, opacity 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65) inset, 0 0 20px rgba(10, 22, 40, 0.12);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 65%);
+}
+
+.cursor::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0a1628;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .cursor.active {
-  transform: scale(3);
-  background: #ffffff;
+  transform: translate(-50%, -50%) scale(1.45);
+  border-color: rgba(10, 22, 40, 0.8);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85) inset, 0 0 28px rgba(10, 22, 40, 0.2);
+}
+
+.cursor.active::before {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.cursor.clicking {
+  transform: translate(-50%, -50%) scale(0.78);
+}
+
+.cursor.clicking::before {
+  transform: translate(-50%, -50%) scale(1.6);
 }
 
 .nav {

@@ -47,6 +47,8 @@ export default function InteractiveEffects() {
 
     const onHoverIn = () => cursor?.classList.add("active");
     const onHoverOut = () => cursor?.classList.remove("active");
+    const onPointerDown = () => cursor?.classList.add("clicking");
+    const onPointerUp = () => cursor?.classList.remove("clicking");
 
     const magneticHandlers = [];
     magneticItems.forEach((item) => {
@@ -65,6 +67,8 @@ export default function InteractiveEffects() {
     });
 
     document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("mouseup", onPointerUp);
     hoverTargets.forEach((el) => {
       el.addEventListener("mouseenter", onHoverIn);
       el.addEventListener("mouseleave", onHoverOut);
@@ -147,6 +151,8 @@ export default function InteractiveEffects() {
     return () => {
       window.clearTimeout(hideLoader);
       document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("mouseup", onPointerUp);
       window.removeEventListener("resize", onResize);
       mobileToggle?.removeEventListener("click", onToggleMobileMenu);
       navLinks.forEach((link) => {
