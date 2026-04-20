@@ -18,6 +18,7 @@ export default function Home() {
           <span className="nav-logo-icon" />
           <span className="nav-logo-text">CYBORGLINK</span>
         </a>
+        <div className="nav-spacer"></div>
         <div className="nav-links">
           <a href="#" className="nav-link">
             About Us
@@ -77,7 +78,12 @@ export default function Home() {
                 <span className="btn-text">Technology</span>
               </button>
             </div>
-            
+
+            <div className="hero-divider">
+              <div className="hero-divider-line"></div>
+              <span className="hero-divider-text">Made by Humans</span>
+              <div className="hero-divider-line"></div>
+            </div>
           </div>
           <div className="hero-image-wrapper">
             <div className="hero-image-container">
@@ -116,7 +122,7 @@ export default function Home() {
       </footer>
 
       <div className="bottom-bar">
-        <div className="bottom-left"> 
+        <div className="bottom-left">
           <span className="bottom-explore">Explore</span>
           <div className="bottom-counter">
             <span className="counter-dot" />

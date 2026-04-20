@@ -25,8 +25,8 @@ export default function InteractiveEffects() {
     let currentY = 0;
 
     const onMouseMove = (event) => {
-      cursorX = event.clientX - 6;
-      cursorY = event.clientY - 6;
+      cursorX = event.clientX;
+      cursorY = event.clientY;
 
       if (heroImage) {
         const x = (event.clientX / window.innerWidth - 0.5) * 10;
