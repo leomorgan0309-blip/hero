@@ -1242,10 +1242,10 @@ html {
 }
 
 .s3-read-more {
-  position: relative;
+  position: absolute !important;
   left: 36px;
-  bottom: -12%;
-  z-index: 4;
+  bottom: 72px;
+  z-index: 30;
   border: none;
   background: #f1f1f1;
   color: #101010;
@@ -1302,11 +1302,9 @@ html {
 
 .s3-robot {
   position: absolute;
-  left: 25%;
-  top: 78px;
-  width: clamp(470px, 43vw, 840px);
-  max-width: 52%;
+  width: 100%;
   height: auto;
+  bottom: 48px;
   z-index: 5;
   mix-blend-mode: normal;
   filter: none;
@@ -1489,10 +1487,6 @@ html {
   }
 
   .s3-robot {
-    left: 35%;
-    top: 120px;
-    width: 62%;
-    max-width: unset;
   }
 
   .s3-right-meta {
@@ -1650,10 +1644,10 @@ html {
     width: clamp(100px, 24vw, 190px);
   }
 
-  .s3-read-more {
+  /* .s3-read-more {
     left: 18px; 
-    bottom: 18%;
-  }
+    bottom: 32px;
+  } */
 
   .s3-vertical-text {
     right: 8px;
@@ -1666,9 +1660,6 @@ html {
   }
 
   .s3-robot {
-    top: 190px;
-    left: 31%;
-    width: 72%;
   }
 
   .bottom-bar {
@@ -1751,10 +1742,10 @@ html {
     font-size: clamp(20px, 5.6vw, 30px);
   }
 
-  .s3-read-more {
+  /* .s3-read-more {
     left: 10px;
-    bottom: -2px;
-  }
+    bottom: 4px;
+  } */
 
   .s3-huge-label {
     left: 10px;
@@ -1763,9 +1754,6 @@ html {
   }
 
   .s3-robot {
-    left: 26%;
-    top: 212px;
-    width: 82%;
   }
 
   .hero-title {
