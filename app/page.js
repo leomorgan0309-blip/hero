@@ -6,7 +6,9 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy-column">
           <h1 className="hero-headline">
-            Design and create <span>website</span> with us now!
+            Design and create <span>website</span>
+            <br />
+            with us now!
           </h1>
 
           <div className="content">

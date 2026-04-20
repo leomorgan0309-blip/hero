@@ -230,6 +230,7 @@ a {
   line-height: 1.2;
   color: #111111;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .scroll-indicator {
