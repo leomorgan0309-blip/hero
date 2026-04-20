@@ -62,7 +62,7 @@ a {
 }
 
 .hero-headline {
-  width: 80vw;
+  width: 74vw;
   max-width: 100%;
   margin-inline: auto;
   padding-top: 8px;
@@ -72,6 +72,7 @@ a {
   font-weight: 700;
   text-align: left;
   text-wrap: balance;
+  margin-left: 22vw;
 }
 
 .hero-headline span {
@@ -81,9 +82,10 @@ a {
 .content {
   position: relative;
   z-index: 4;
-  width: 80vw;
+  width: 74vw;
   max-width: 100%;
   margin-inline: auto;
+  margin-left: 22vw;
   padding-top: 0;
 }
 
@@ -153,7 +155,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0;
-  font-size: 24px;
+  font-size: 16px;
+  padding-right: 15vw;
   line-height: 1.15;
   color: #757575;
 }
@@ -163,14 +166,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 31px;
+  font-size: 20px;
   color: #8a8a8a;
 }
 
 .side-image-wrap {
   position: absolute;
   left: clamp(-4px, 0.8vw, 6px);
-  bottom: clamp(10px, 2vw, 16px);
+  /* Align side portrait baseline with main portrait */
+  bottom: -64px;
   width: min(28vw, 310px);
   aspect-ratio: 480 / 512;
   z-index: 1;
@@ -186,7 +190,7 @@ a {
 .ghost-text {
   position: absolute;
   z-index: 1;
-  font-size: 72px;
+  font-size: 50px;
   line-height: 0.9;
   letter-spacing: -0.04em;
   color: var(--ghost-text-color);
@@ -199,7 +203,7 @@ a {
 }
 
 .ghost-right {
-  right: 8px;
+  right: 90px;
   bottom: 144px;
 }
 
@@ -309,12 +313,17 @@ a {
   }
 
   .side-meta {
-    top: 36px; 
+    top: 14px;
+    right: 18px;
+    padding-right: 15vw !important;
     font-size: 12px;
+    line-height: 1.2;
   }
 
   .faq-link {
+    margin-top: 14px;
     font-size: 15px;
+    gap: 6px;
   }
 
   .side-image-wrap {
@@ -345,6 +354,19 @@ a {
 
   .hero-headline {
     font-size: 35px;
+  }
+
+  .side-meta {
+    top: 10px;
+    right: 8px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .faq-link {
+    margin-top: 10px;
+    font-size: 9px;
+    gap: 4px;
   }
 
   .content p {

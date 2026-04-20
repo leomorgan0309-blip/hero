@@ -47,7 +47,7 @@ export default function Home() {
           <p>Create</p>
 
           <a href="#faq" className="faq-link">
-            FAQ <span aria-hidden="true">↓</span>
+            <u>FAQ <span aria-hidden="true">↓</span></u>
           </a>
         </aside>
 
