@@ -18,7 +18,6 @@ export default function Home() {
           <span className="nav-logo-icon" />
           <span className="nav-logo-text">CYBORGLINK</span>
         </a>
-        <div className="nav-spacer"></div>
         <div className="nav-links">
           <a href="#" className="nav-link">
             About Us
