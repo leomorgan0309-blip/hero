@@ -454,11 +454,29 @@ body {
   background: #ffffff;
   color: #0a1628;
   overflow: hidden;
+  cursor: none;
 }
 
 html {
   height: 100%;
   overflow: hidden;
+}
+
+a,
+button,
+.btn,
+.nav-link,
+.nav-cta,
+.mobile-toggle {
+  cursor: none;
+}
+
+/* Prevent browser from switching to hand cursor on hover states */
+*,
+*:hover,
+*:focus,
+*:active {
+  cursor: none !important;
 }
 
 .loader {
