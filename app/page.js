@@ -125,16 +125,9 @@ export default function Home() {
         <div className="bottom-left">
           <span className="bottom-explore">Explore</span>
           <div className="bottom-counter">
-            <span className="counter-dot" />
-            <div className="counter-item">
-              <span className="counter-num">02K</span>
-              <span className="counter-label">Projects</span>
-            </div>
-            <span className="counter-dot" />
-            <div className="counter-item">
-              <span className="counter-num">21K</span>
-              <span className="counter-label">Users</span>
-            </div>
+            <span className="counter-num">02K</span>
+            <span className="counter-separator-line" aria-hidden="true" />
+            <span className="counter-num">21K</span>
           </div>
         </div>
         <div className="bottom-right">

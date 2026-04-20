@@ -878,6 +878,12 @@ html {
   background: rgba(10, 22, 40, 0.08);
 }
 
+.hero-divider-line1 {
+  flex: 1;
+  height: 2px;
+  background: rgba(10, 22, 40, 0.08);
+}
+
 .hero-divider-text {
   font-size: 10px;
   font-weight: 500;
@@ -1136,9 +1142,21 @@ html {
   gap: 8px;
 }
 
-.counter-num {
-  font-size: 12px;
+.bottom-left {
+  gap: 14px;
+}
+
+.bottom-explore {
+  color: #5c6a86;
   font-weight: 600;
+  letter-spacing: 2.2px;
+}
+
+.counter-num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #8b95ab;
 }
 
 .counter-dot {
@@ -1146,6 +1164,14 @@ html {
   height: 3px;
   border-radius: 50%;
   background: rgba(10, 22, 40, 0.15);
+}
+
+.counter-separator-line {
+  width: 44px;
+  height: 1px;
+  background: rgba(10, 22, 40, 0.14);
+  display: inline-block;
+  margin-inline: 8px;
 }
 
 .bottom-progress {
