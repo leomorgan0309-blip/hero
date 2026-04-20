@@ -101,6 +101,71 @@ export default function Home() {
         </div>
       </main>
 
+      <section className="section-transition" aria-hidden="true">
+        <div className="transition-line" />
+        <span className="transition-dot transition-dot-left" />
+        <span className="transition-dot transition-dot-right" />
+      </section>
+
+      <section className="s3-frame">
+        <div className="s3-content">
+          <div className="s3-left-meta">
+            <h2>INDUSTRIES WE SERVE</h2>
+            <p>
+              List of industries we worked with
+              <br />
+              on our platform:
+            </p>
+            <span>01/03</span>
+          </div>
+
+          <h2 className="s3-headline">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHANGING
+            <br />
+            YOUR IDEA OF
+            <br />
+            &nbsp;&nbsp;WHAT ROBOTS
+            <br />
+            CAN DO
+          </h2>
+
+          <div className="s3-right-meta">
+            <h3>INDUSTRY 01</h3>
+            <p>
+              Description Here
+              <br />
+              about the industry
+            </p>
+          </div>
+
+          <div className="s3-center-line">
+            <span>N</span>
+            <span className="s3-line" />
+            <span>P</span>
+          </div>
+
+          <button type="button" className="s3-read-more">
+            <span>Read More</span>
+            <span className="s3-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </button>
+
+          <p className="s3-vertical-text">US WORK WITH</p>
+          <p className="s3-huge-label-rjv">RJV</p>
+          <p className="s3-huge-label-09">09</p>
+
+          <Image
+            className="s3-robot"
+            src="/section3-robot.png"
+            alt="Futuristic robot"
+            width={980}
+            height={980}
+            priority={false}
+          />
+        </div>
+      </section>
+
       <footer className="footer">
         <span className="footer-text">© 2026 CyborgLink. All rights reserved.</span>
         <div className="footer-links">
