@@ -8,6 +8,8 @@ export default function InteractiveEffects() {
     const nav = document.querySelector(".nav");
     const navLinksPanel = document.querySelector(".nav-links");
     const mobileToggle = document.getElementById("mobileToggle");
+    const sectionThree = document.querySelector(".s3-frame");
+    const sectionThreeRevealEls = document.querySelectorAll(".s3-reveal");
     const magneticItems = document.querySelectorAll(".btn-magnetic");
     const navLinks = document.querySelectorAll(".nav-links .nav-link");
     const clickableButtons = document.querySelectorAll("button, .btn");
@@ -105,9 +107,27 @@ export default function InteractiveEffects() {
 
     window.addEventListener("resize", onResize);
 
+    let sectionThreeObserver = null;
+    if (sectionThree && sectionThreeRevealEls.length > 0) {
+      sectionThreeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              sectionThreeRevealEls.forEach((el) => el.classList.add("is-visible"));
+            } else {
+              sectionThreeRevealEls.forEach((el) => el.classList.remove("is-visible"));
+            }
+          });
+        },
+        { threshold: 0.22, rootMargin: "-8% 0px -8% 0px" }
+      );
+      sectionThreeObserver.observe(sectionThree);
+    }
+
     return () => {
       window.clearTimeout(hideLoader);
       window.removeEventListener("resize", onResize);
+      sectionThreeObserver?.disconnect();
       mobileToggle?.removeEventListener("click", onToggleMobileMenu);
       navLinks.forEach((link) => {
         link.removeEventListener("click", onCloseMobileMenu);
