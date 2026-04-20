@@ -150,8 +150,8 @@ export default function Home() {
               ↗
             </span>
           </button>
-
-          <p className="s3-vertical-text">US WORK WITH</p>
+          <p className="s3-vertical-text-us">US </p> 
+          <p className="s3-vertical-text">WORK WITH</p>
           <p className="s3-huge-label-rjv">RJV</p>
           <p className="s3-huge-label-09">09</p>
 

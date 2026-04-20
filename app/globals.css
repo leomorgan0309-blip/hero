@@ -1224,7 +1224,7 @@ html {
 .s3-center-line {
   position: absolute;
   right: 78px;
-  top: 410px;
+  top: 310px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -1232,6 +1232,9 @@ html {
   font-size: clamp(28px, 2.1vw, 44px);
   letter-spacing: 0.7px;
   animation: fadeUp 0.9s 0.45s both;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 
 .s3-center-line .s3-line {
@@ -1239,6 +1242,8 @@ html {
   width: clamp(180px, 11vw, 320px);
   height: 2px;
   background: #666;
+  border: 0;
+  box-shadow: none;
 }
 
 .s3-read-more {
@@ -1261,15 +1266,32 @@ html {
 
 .s3-vertical-text {
   position: absolute;
-  right: 18px;
-  bottom: 52px;
+  right: 66px;
+  bottom: 86px;
   margin: 0;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 1.5px;
-  color: #3d3d3d;
-  font-size: clamp(13px, 0.9vw, 20px);
-  font-weight: 800;
+  writing-mode: horizontal-tb;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  letter-spacing: 1.2px;
+  color: #4a4a4a;
+  font-size: clamp(12px, 0.82vw, 18px);
+  font-weight: 700;
+  z-index: 3;
+}
+
+.s3-vertical-text-us {
+  position: absolute;
+  right: 96px;
+  bottom: 150px;
+  margin: 0;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  letter-spacing: 1px;
+  color: #5a5a5a;
+  font-size: clamp(11px, 0.72vw, 16px);
+  font-weight: 700;
   z-index: 3;
 }
 
@@ -1288,9 +1310,9 @@ html {
 
 .s3-huge-label-09 {
   position: absolute;
-  right: 34px;
+  right: 15vw;
   bottom: -45px;
-  margin: 0;
+  margin: 50px;
   color: #ececec;
   font-size: clamp(160px, 21vw, 420px);
   font-weight: 800;
@@ -1650,8 +1672,13 @@ html {
   } */
 
   .s3-vertical-text {
-    right: 8px;
-    bottom: 42px;
+    right: 38px;
+    bottom: 64px;
+  }
+
+  .s3-vertical-text-us {
+    right: 62px;
+    bottom: 64px;
   }
 
   .s3-huge-label {
@@ -1746,6 +1773,16 @@ html {
     left: 10px;
     bottom: 4px;
   } */
+
+  .s3-vertical-text {
+    right: 22px;
+    bottom: 52px;
+  }
+
+  .s3-vertical-text-us {
+    right: 40px;
+    bottom: 150px;
+  }
 
   .s3-huge-label {
     left: 10px;
